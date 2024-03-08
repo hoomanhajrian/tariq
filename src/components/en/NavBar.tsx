@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Logo from "@/app/logo.png";
 
 const NavBar = () => {
   const [active, setActive] = useState<{
@@ -103,16 +104,21 @@ const NavBar = () => {
         }}
       >
         <Image
-          src="/next.svg"
+          src={Logo}
           className="mr-3 h-6 sm:h-9"
           alt="Tariq Logo"
-          width={100}
-          height={100}
+          width={150}
+          height={150}
           style={{ width: "auto", height: "auto" }}
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Tariq Louis
-        </span>
+        <div className="flex flex-col">
+          <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white">
+            Tariq Louis
+          </h1>
+          <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
+            Sculptor
+          </h2>
+        </div>
       </NavbarBrand>
       <div className="flex md:order-2">
         <Dropdown label="Language: en" dismissOnClick={false}>
@@ -122,6 +128,7 @@ const NavBar = () => {
               alt="uk language"
               width={20}
               height={20}
+              style={{ width: "auto", height: "auto" }}
             />
             English
           </Dropdown.Item>
@@ -131,8 +138,9 @@ const NavBar = () => {
               alt="arabic language"
               width={20}
               height={20}
+              style={{ width: "auto", height: "auto" }}
             />
-            arabic
+            عربي
           </Dropdown.Item>
         </Dropdown>
         <NavbarToggle />
