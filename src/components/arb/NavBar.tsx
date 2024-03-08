@@ -111,9 +111,14 @@ const NavBar = () => {
           height={150}
           style={{ width: "auto", height: "auto" }}
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          تارک لويس
-        </span>
+        <div className="flex flex-col">
+          <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white">
+            تارک لويس
+          </h1>
+          <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
+            نحات
+          </h2>
+        </div>
       </NavbarBrand>
       <div className="flex md:order-2">
         <Dropdown label="لغة : عربي" dismissOnClick={false}>
@@ -140,7 +145,7 @@ const NavBar = () => {
         </Dropdown>
         <NavbarToggle />
       </div>
-      <NavbarCollapse className="flex justify-center">
+      <NavbarCollapse>
         <NavbarLink
           className="ml-5"
           href="/arb"
