@@ -5,7 +5,7 @@ import Negotiator from "negotiator";
 let locales = ["en", "arb"];
 let headers = { "accept-language": "en-US,en;q=0.5" };
 let languages = new Negotiator({ headers }).languages();
-let defaultLocale = "en-US";
+let defaultLocale = "en";
 
 // Get the preferred locale, similar to the above or using a library
 const getLocale = (request: NextRequest) => {
