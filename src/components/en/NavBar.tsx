@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Logo from "@/app/logo.png";
+import Logo from "@/app/icon.png";
 
 const NavBar = () => {
   const [active, setActive] = useState<{
@@ -124,7 +124,7 @@ const NavBar = () => {
         <Dropdown label="Language: en" dismissOnClick={false}>
           <Dropdown.Item disabled>
             <Image
-              src={"/icons/uk-icon.png"}
+              src="/icons/uk-icon.png"
               alt="uk language"
               width={20}
               height={20}
