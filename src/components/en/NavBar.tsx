@@ -11,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "@/app/icon.png";
+import UK from "@/icons/uk-icon.png";
+import UAE from "@/icons/uae-icon.png";
 
 const NavBar = () => {
   const [active, setActive] = useState<{
@@ -90,7 +92,7 @@ const NavBar = () => {
     }
   }, []);
   return (
-    <Navbar fluid rounded className="bg-black">
+    <Navbar fluid rounded className="bg-lightGreen">
       <NavbarBrand
         href="/en"
         onClick={() => {
@@ -121,10 +123,14 @@ const NavBar = () => {
         </div>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Dropdown label="Language: en" dismissOnClick={false}>
-          <Dropdown.Item disabled>
+        <Dropdown
+          label="Language : en"
+          className="font-extrabold"
+          dismissOnClick={false}
+        >
+          <Dropdown.Item disabled className="flex flex-row justify-around">
             <Image
-              src="/icons/uk-icon.png"
+              src={UK}
               alt="uk language"
               width={20}
               height={20}
@@ -132,9 +138,9 @@ const NavBar = () => {
             />
             English
           </Dropdown.Item>
-          <Dropdown.Item href="/arb">
+          <Dropdown.Item href="/arb" className="flex flex-row justify-around">
             <Image
-              src={"/icons/uae-icon.png"}
+              src={UAE}
               alt="arabic language"
               width={20}
               height={20}
@@ -147,6 +153,7 @@ const NavBar = () => {
       </div>
       <NavbarCollapse>
         <NavbarLink
+          className="font-extrabold"
           href="/en"
           as={Link}
           active={active.home}
@@ -163,6 +170,7 @@ const NavBar = () => {
           Home
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/en/gallary"
           as={Link}
           active={active.gallary}
@@ -179,6 +187,7 @@ const NavBar = () => {
           Gallary
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/en/resume"
           as={Link}
           active={active.resume}
@@ -195,6 +204,7 @@ const NavBar = () => {
           Resume
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/en/services"
           as={Link}
           active={active.services}
@@ -211,6 +221,7 @@ const NavBar = () => {
           Services
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/en/about"
           as={Link}
           active={active.about}

@@ -5,17 +5,25 @@ import {
   FooterLinkGroup,
 } from "flowbite-react";
 export const FooterComponent = () => {
+  const date = new Date();
   return (
-    <Footer container className="absolute bottom-0 left-0 bg-black">
+    <Footer container className=" bg-lightGreen p-10" dir="rtl">
       <FooterCopyright
+        className="font-extrabold text-textLight"
         href="https://hh-portfolio.com"
         by="Hooman"
-        year={2022}
+        year={date.getFullYear()}
       />
       <FooterLinkGroup>
-        <FooterLink href="#">Phone: +1(778)-751-1620</FooterLink>
-        <FooterLink href="#">Email: tariqlouiss@yahoo.com</FooterLink>
-        <FooterLink href="#">Facebook: tariq louis</FooterLink>
+        <FooterLink href="#" className="font-extrabold text-textLight">
+          هاتف : +1(778)-751-1620
+        </FooterLink>
+        <FooterLink href="#" className="font-extrabold text-textLight">
+          بريد إلكتروني : tariqlouiss@yahoo.com
+        </FooterLink>
+        <FooterLink href="#" className="font-extrabold text-textLight">
+          فيسبوك: tariq louis
+        </FooterLink>
       </FooterLinkGroup>
     </Footer>
   );

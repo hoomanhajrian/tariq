@@ -35,9 +35,20 @@ const config: Config = {
       serif: ["Merriweather", "serif"],
     },
     extend: {
+      colors: {
+        green: "#7b876d",
+        lightGreen: "#989e8b",
+        pink: "#ddb8a6",
+        cream: "#d49b7e",
+        orange: "#c67f43",
+        brown: "#893f04",
+        textLight: "#fff",
+        textDark: "#000",
+      },
       spacing: {
         "128": "32rem",
         "144": "36rem",
+        "100": "100%",
       },
       borderRadius: {
         "4xl": "2rem",

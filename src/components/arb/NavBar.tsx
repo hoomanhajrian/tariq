@@ -11,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "@/app/icon.png";
+import UK from "@/icons/uk-icon.png";
+import UAE from "@/icons/uae-icon.png";
 
 const NavBar = () => {
   const [active, setActive] = useState<{
@@ -90,7 +92,7 @@ const NavBar = () => {
     }
   }, []);
   return (
-    <Navbar fluid rounded dir="rtl" className="bg-black">
+    <Navbar fluid rounded dir="rtl" className="bg-lightGreen">
       <NavbarBrand
         href="/arb"
         onClick={() => {
@@ -121,21 +123,25 @@ const NavBar = () => {
         </div>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Dropdown label="لغة : عربي" dismissOnClick={false}>
-          <Dropdown.Item href="/en">
+        <Dropdown
+          label="لغة : عربي"
+          dismissOnClick={false}
+          className="font-extrabold"
+        >
+          <Dropdown.Item href="/en" className="flex flex-row justify-around">
             English
             <Image
-              src={"/icons/uk-icon.png"}
+              src={UK}
               alt="uk language"
               width={20}
               height={20}
               style={{ width: "auto", height: "auto" }}
             />
           </Dropdown.Item>
-          <Dropdown.Item disabled>
+          <Dropdown.Item disabled className="flex flex-row justify-around">
             عربي
             <Image
-              src={"/icons/uae-icon.png"}
+              src={UAE}
               alt="arabic language"
               width={20}
               height={20}
@@ -147,7 +153,7 @@ const NavBar = () => {
       </div>
       <NavbarCollapse>
         <NavbarLink
-          className="ml-5"
+          className="ml-5 font-extrabold"
           href="/arb"
           as={Link}
           active={active.home}
@@ -164,6 +170,7 @@ const NavBar = () => {
           الصفحة الرئيسية
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/arb/gallary"
           as={Link}
           active={active.gallary}
@@ -180,6 +187,7 @@ const NavBar = () => {
           الصور
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/arb/resume"
           as={Link}
           active={active.resume}
@@ -196,6 +204,7 @@ const NavBar = () => {
           سيرة ذاتية
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/arb/services"
           as={Link}
           active={active.services}
@@ -212,6 +221,7 @@ const NavBar = () => {
           خدمات
         </NavbarLink>
         <NavbarLink
+          className="font-extrabold"
           href="/arb/about"
           as={Link}
           active={active.about}
