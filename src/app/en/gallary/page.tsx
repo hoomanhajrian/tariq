@@ -1,10 +1,41 @@
+"use client";
 import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 const Gallary = () => {
+  const [cols, setCols] = useState(1);
+  const [pageX, updatePageX] = useState<number>(0);
+  useEffect(() => {
+    updatePageX(window.innerWidth);
+    const handleResize = () => {
+      updatePageX(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (pageX > 600 && pageX < 900) {
+      setCols(2);
+    } else if (pageX > 900 && pageX < 1200) {
+      setCols(3);
+    } else if (pageX > 1200) {
+      setCols(4);
+    } else {
+      setCols(1);
+    }
+  }, [pageX]);
+
   return (
-    <ImageList sx={{ width: "100%", height: "100%" }}>
+    <ImageList
+      sx={{ width: "100%", height: "100%" }}
+      cols={cols}
+      gap={8}
+      className="bg-lightGreen"
+    >
       {itemData.map((item) => (
-        <ImageListItem key={item.img}>
+        <ImageListItem key={item.img} className="bg-brown">
           <Image
             src={`${item.img}?w=248&fit=crop&auto=format`}
             alt={item.title}
@@ -15,6 +46,7 @@ const Gallary = () => {
             style={{ width: "100%", height: "100%" }}
           />
           <ImageListItemBar
+            className="pl-2"
             title={item.title}
             subtitle={<span>by: {item.author}</span>}
             position="below"

@@ -1,21 +1,52 @@
+"use client";
 import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 const Gallary = () => {
+  const [cols, setCols] = useState(1);
+  const [pageX, updatePageX] = useState<number>(0);
+  useEffect(() => {
+    updatePageX(window.innerWidth);
+    const handleResize = () => {
+      updatePageX(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (pageX > 600 && pageX < 900) {
+      setCols(2);
+    } else if (pageX > 900 && pageX < 1200) {
+      setCols(3);
+    } else if (pageX > 1200) {
+      setCols(4);
+    } else {
+      setCols(1);
+    }
+  }, [pageX]);
+
   return (
-    <ImageList sx={{ width: "100%", height: "100%", direction: "rtl" }}>
+    <ImageList
+      sx={{ width: "100%", height: "100%", direction: "rtl" }}
+      cols={cols}
+    >
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <Image
             src={`${item.img}?w=248&fit=crop&auto=format`}
             alt={item.title}
             loading="lazy"
+            unoptimized
             width={100}
             height={100}
             style={{ width: "100%", height: "100%" }}
           />
           <ImageListItemBar
+            className="pr-2 text-righ bg-brown"
             title={item.title}
-            subtitle={<span>by: {item.author}</span>}
+            subtitle={<span> {item.author}</span>}
             position="below"
           />
         </ImageListItem>
@@ -28,8 +59,8 @@ export default Gallary;
 const itemData = [
   {
     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-    author: "@bkristastucchio",
+    title: "شتنسیتشصمی",
+    author: "ننشسیدخ",
   },
   {
     img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
