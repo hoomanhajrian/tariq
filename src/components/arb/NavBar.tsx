@@ -92,43 +92,43 @@ const NavBar = () => {
     }
   }, []);
   return (
-    <Navbar fluid rounded dir="rtl" className="bg-lightGreen">
-      <NavbarBrand
-        href="/arb"
-        onClick={() => {
-          setActive({
-            home: true,
-            gallary: false,
-            resume: false,
-            services: false,
-            about: false,
-          });
-        }}
-      >
-        <Image
-          src={Logo}
-          className="mr-3 h-6 sm:h-9"
-          alt="Tariq Logo"
-          width={150}
-          height={150}
-          style={{ width: "auto", height: "auto" }}
-        />
-        <div className="flex flex-col">
-          <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white">
-            تارک لويس
-          </h1>
-          <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
-            نحات
-          </h2>
-        </div>
-      </NavbarBrand>
-      <div className="flex md:order-2">
+    <Navbar fluid rounded dir="rtl" className="bg-green">
+      <div className="flex flex-col justify-center">
+        <NavbarBrand
+          href="/arb"
+          onClick={() => {
+            setActive({
+              home: true,
+              gallary: false,
+              resume: false,
+              services: false,
+              about: false,
+            });
+          }}
+        >
+          <Image
+            src={Logo}
+            className="mr-3 h-6 sm:h-9"
+            alt="Tariq Logo"
+            width={150}
+            height={150}
+            style={{ width: "auto", height: "auto" }}
+          />
+          <div className="flex flex-col">
+            <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white">
+              طارق لويس
+            </h1>
+            <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
+              نحات
+            </h2>
+          </div>
+        </NavbarBrand>
         <Dropdown
           label="لغة : عربي"
           dismissOnClick={false}
           className="font-extrabold"
         >
-          <Dropdown.Item href="/en" className="flex flex-row justify-around">
+          <Dropdown.Item href="/en" className="flex flex-row justify-between">
             English
             <Image
               src={UK}
@@ -138,7 +138,7 @@ const NavBar = () => {
               style={{ width: "auto", height: "auto" }}
             />
           </Dropdown.Item>
-          <Dropdown.Item disabled className="flex flex-row justify-around">
+          <Dropdown.Item disabled className="flex flex-row justify-between">
             عربي
             <Image
               src={UAE}
@@ -149,8 +149,10 @@ const NavBar = () => {
             />
           </Dropdown.Item>
         </Dropdown>
-        <NavbarToggle />
       </div>
+
+      <NavbarToggle />
+
       <NavbarCollapse>
         <NavbarLink
           className="ml-5 font-extrabold"

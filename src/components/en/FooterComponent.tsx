@@ -8,7 +8,7 @@ import {
 export const FooterComponent = () => {
   const date = new Date();
   return (
-    <Footer container className="bg-lightGreen p-10">
+    <Footer container className="bg-green p-10">
       <FooterCopyright
         className="font-extrabold text-textLight"
         href="https://hh-portfolio.com"
