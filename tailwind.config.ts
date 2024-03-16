@@ -21,15 +21,6 @@ const config: Config = {
       lg: "976px",
       xl: "1440px",
     },
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      blue: "#327f84",
-      gray: "#8d9392",
-      cream: "#b4b7b1",
-      green: "#344428",
-      brown: "#9c8474",
-    },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
