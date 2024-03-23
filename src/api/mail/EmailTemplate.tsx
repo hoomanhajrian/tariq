@@ -11,24 +11,20 @@ import {
 
 interface EmailTemplateProps {
   name: string;
-  company: string;
   email: string;
   phone: string;
   request: string;
-  message: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   name,
-  company,
   email,
   phone,
   request,
-  message,
 }) => (
   <Html>
     <Head>
-      <title>{company}</title>
+      <title>Website Request</title>
     </Head>
     <Body>
       <Img
@@ -37,20 +33,19 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         height="50px"
       />
       <Heading as="h2" mr="auto" ml="auto" mt="24px" mb="48px">
-        PACIVIL
+        Tariq Louis: Sculptor
       </Heading>
       <Hr />
-      <Text>Hello,</Text>
-      <Text>I would need help with {request}.</Text>
-      <Text>{message}</Text>
+      <Text>Hello Tariq,</Text>
+      <Text>I would like to if you can make below requests for me:</Text>
+      <Text>{request}.</Text>
       <Text>
-        Reply to this message using this{" "}
+        Reply to this message using this
         <Link href={`mailto:${email}`}>Link</Link>
       </Text>
 
       <Text>Cheers,</Text>
       <Text>{name}</Text>
-      <Text>{company}</Text>
       <Text>{phone}</Text>
       <Text>{email}</Text>
     </Body>
