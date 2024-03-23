@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <div style={{ direction: "rtl" }}>
       <NavBar />
-      {children}
+      <div className="p-3">{children}</div>
       <FooterComponent />
     </div>
   );
