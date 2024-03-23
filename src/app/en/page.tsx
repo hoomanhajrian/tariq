@@ -17,10 +17,10 @@ export default function Home() {
         breathes life into stone and metal, transforming raw materials into
         exquisite works of art. Each sculpture tells a story, capturing moments
         of emotion, movement, and beauty frozen in time. From towering monuments
-        to delicate figurines, Louis's portfolio showcases a diverse range of
-        subjects and styles, reflecting his versatility and passion for his
+        to delicate figurines, Louis&apos;s portfolio showcases a diverse range
+        of subjects and styles, reflecting his versatility and passion for his
         craft. Explore his gallery and immerse yourself in the captivating world
-        of Tariq Louis's sculptural mastery.
+        of Tariq Louis&apos;s sculptural mastery.
       </p>
     </>
   );
