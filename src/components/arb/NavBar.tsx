@@ -93,40 +93,41 @@ const NavBar = () => {
   }, []);
   return (
     <Navbar fluid rounded dir="rtl" className="bg-green">
-      <div className="flex flex-col justify-center">
-        <NavbarBrand
-          href="/arb"
-          onClick={() => {
-            setActive({
-              home: true,
-              gallary: false,
-              resume: false,
-              services: false,
-              about: false,
-            });
-          }}
-        >
-          <Image
-            src={Logo}
-            className="mr-3 h-6 sm:h-9"
-            alt="Tariq Logo"
-            width={150}
-            height={150}
-            style={{ width: "auto", height: "auto" }}
-          />
-          <div className="flex flex-col">
-            <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white">
-              طارق لويس
-            </h1>
-            <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
-              نحات
-            </h2>
-          </div>
-        </NavbarBrand>
+      <NavbarBrand
+        href="/arb"
+        onClick={() => {
+          setActive({
+            home: true,
+            gallary: false,
+            resume: false,
+            services: false,
+            about: false,
+          });
+        }}
+      >
+        <Image
+          src={Logo}
+          className="mr-3"
+          alt="Tariq Logo"
+          width={100}
+          height={100}
+          style={{ width: "auto", height: "auto" }}
+        />
+        <div className="flex flex-col">
+          <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white mt-0">
+            طارق لويس
+          </h1>
+          <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
+            نحات
+          </h2>
+        </div>
+      </NavbarBrand>
+      <div className="flex flex-row flex-wrap justify-between md:order-2 w-100">
         <Dropdown
           label="لغة : عربي"
-          dismissOnClick={false}
-          className="font-extrabold"
+          dismissOnClick={true}
+          color="primary"
+          className="font-extrabold sm:mr-10"
         >
           <Dropdown.Item href="/en" className="flex flex-row justify-between">
             English
@@ -149,10 +150,8 @@ const NavBar = () => {
             />
           </Dropdown.Item>
         </Dropdown>
+        <NavbarToggle />
       </div>
-
-      <NavbarToggle />
-
       <NavbarCollapse>
         <NavbarLink
           className="ml-5 font-extrabold"
