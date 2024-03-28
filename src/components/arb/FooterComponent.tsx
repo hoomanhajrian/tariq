@@ -17,6 +17,12 @@ export const FooterComponent = () => {
         </h2>
       </div>
       <FooterLinkGroup className="gap-5">
+        <FooterCopyright
+          className="font-extrabold text-textLight"
+          href="https://hh-portfolio.com"
+          by="هومن"
+          year={date.getFullYear()}
+        />
         <FooterLink href="#" className="font-extrabold text-textLight">
           هاتف : +1 (778)-751-1620
         </FooterLink>
