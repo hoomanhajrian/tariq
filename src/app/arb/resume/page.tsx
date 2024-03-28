@@ -12,18 +12,20 @@ const Resume = () => {
     <Container maxWidth="md" style={{ direction: "rtl" }}>
       <Box my={4}>
         <Typography variant="h3" component="h1" gutterBottom>
-          John Doe
+          طارق لویس
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          Frontend Developer
+          نحات
+        </Typography>
+        <Typography variant="h5" component="h3" gutterBottom>
+          عضو جمعية الفنانين التشكيليين العراقيين
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Email: johndoe@example.com
+          بريد إلكتروني : tariqlouiss@yahoo.com
         </Typography>
-
         <Box mt={4}>
           <Typography variant="h4" gutterBottom>
-            Education
+            تعليم
           </Typography>
           <List>
             <ListItem>
