@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import Logo from "@/app/icon.png";
 import UK from "@/icons/uk-icon.png";
 import UAE from "@/icons/uae-icon.png";
+import { Typography } from "@mui/material";
 
 const NavBar = () => {
   const [active, setActive] = useState<{
@@ -107,19 +108,26 @@ const NavBar = () => {
       >
         <Image
           src={Logo}
-          className="mr-3"
+          className="mr-0"
           alt="Tariq Logo"
           width={100}
           height={100}
           style={{ width: "auto", height: "auto" }}
         />
         <div className="flex flex-col">
-          <h1 className="self-start whitespace-nowrap text-4xl font-semibold dark:text-white mt-0">
+          <Typography
+            component={"h1"}
+            className="self-start whitespace-nowrap sm:text-2xl md:text-4xl font-semibold text-white mt-0"
+          >
             طارق لويس
-          </h1>
-          <h2 className="self-start whitespace-nowrap text-2xl font-semibold dark:text-white">
-            نحات
-          </h2>
+          </Typography>
+          <Typography
+            component={"h2"}
+            variant="body1"
+            className="self-start whitespace-nowrap sm:text-sm md:text-xl font-semibold text-white"
+          >
+            النحات والرسام
+          </Typography>
         </div>
       </NavbarBrand>
       <div className="flex flex-row flex-wrap justify-between md:order-2 w-100">
