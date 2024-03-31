@@ -1,9 +1,10 @@
 import ContactForm from "@/components/en/ContactForm";
+import { Typography } from "@mui/material";
 
 const Services = () => {
   return (
     <>
-      <p>
+      <Typography variant="h6" component={"p"} align="justify">
         Tariq Louis offers a range of services for those interested in acquiring
         his artwork or commissioning custom pieces. Whether you&apos;re a
         collector looking to add a unique sculpture to your collection or an
@@ -16,7 +17,7 @@ const Services = () => {
         piece is crafted with meticulous attention to detail and artistic
         integrity. Contact us today to inquire about Tariq Louis&apos;s services
         and begin your journey towards owning a masterpiece of sculptural art.
-      </p>
+      </Typography>
       <ContactForm />
     </>
   );
