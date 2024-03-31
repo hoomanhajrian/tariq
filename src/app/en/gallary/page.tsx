@@ -1,7 +1,14 @@
 "use client";
-import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import {
+  Box,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import background from "@/pics/tariq-background.jpg";
 const Gallary = () => {
   const [cols, setCols] = useState(1);
   const [pageX, updatePageX] = useState<number>(0);
@@ -28,32 +35,52 @@ const Gallary = () => {
   }, [pageX]);
 
   return (
-    <ImageList
-      sx={{ width: "100%", height: "100%" }}
-      cols={cols}
-      gap={8}
-      className="bg-lightGreen"
-    >
-      {itemData.map((item) => (
-        <ImageListItem key={item.img} className="bg-brown">
-          <Image
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            alt={item.title}
-            loading="lazy"
-            unoptimized
-            width={100}
-            height={100}
-            style={{ width: "100%", height: "100%" }}
-          />
-          <ImageListItemBar
-            className="pl-2"
-            title={`${item.id} . ${item.title}`}
-            subtitle={<span>by: {item.author}</span>}
-            position="below"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <>
+      <Box className="relative">
+        <Image
+          src={background}
+          alt="tariq-louis-background"
+          width={500}
+          height={500}
+          className="mr-auto ml-auto m-2 filter grayscale brightness-50 md:w-90 sm:w-100 md:h-65vh sm:h-50 rounded-lg"
+        />
+        <Box className="absolute md:left-24 top-2 sm:left-5 p-5 md:w-25">
+          <Typography component={"h3"} variant="h3">
+            Gallary
+          </Typography>
+          <Typography component={"p"} variant="h6">
+            Here you can find some of my artwork to take a look and order online
+            by contacting me.
+          </Typography>
+        </Box>
+      </Box>
+      <ImageList
+        sx={{ width: "100%", height: "100%" }}
+        cols={cols}
+        gap={8}
+        className="bg-lightGreen"
+      >
+        {itemData.map((item) => (
+          <ImageListItem key={item.img} className="bg-brown">
+            <Image
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+              unoptimized
+              width={100}
+              height={100}
+              style={{ width: "100%", height: "100%" }}
+            />
+            <ImageListItemBar
+              className="pl-2"
+              title={`${item.id} . ${item.title}`}
+              subtitle={<span>by: {item.author}</span>}
+              position="below"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </>
   );
 };
 export default Gallary;
