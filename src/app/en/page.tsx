@@ -1,16 +1,17 @@
 import Image from "next/image";
+import backgroundImage from "@/pics/background.jpg";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Image
-        src="/header-image.jpg"
+        src={backgroundImage}
         alt="Louis Tariq"
-        width={1024}
-        height={500}
-        style={{ width: "100%", height: "100%" }}
+        style={{ height: "600px" }}
+        className="mr-auto ml-auto w-100 md:w-90 filter brightness-50"
+        priority
       />
-      <p>
+      <p className="absolute bottom-0 rounded-2xl p-8 bg-brown opacity-70 text-justify h-60 text-xs md:h-auto md:text-lg">
         Tariq Louis is a master sculptor whose creations transcend the ordinary,
         inviting viewers into a world where imagination meets craftsmanship.
         With a keen eye for detail and a deep understanding of form, Louis
@@ -22,6 +23,6 @@ export default function Home() {
         craft. Explore his gallery and immerse yourself in the captivating world
         of Tariq Louis&apos;s sculptural mastery.
       </p>
-    </>
+    </div>
   );
 }
