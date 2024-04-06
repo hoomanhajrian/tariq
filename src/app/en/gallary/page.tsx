@@ -9,9 +9,75 @@ import {
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import background from "@/pics/tariq-background.jpg";
+
+const gallaryData = [
+  { id: 1, title: "", subtitle: "" },
+  { id: 2, title: "", subtitle: "" },
+  { id: 3, title: "", subtitle: "" },
+  { id: 4, title: "", subtitle: "" },
+  { id: 5, title: "", subtitle: "" },
+  { id: 6, title: "", subtitle: "" },
+  { id: 7, title: "", subtitle: "" },
+  { id: 8, title: "", subtitle: "" },
+  { id: 9, title: "", subtitle: "" },
+  { id: 10, title: "", subtitle: "" },
+  { id: 11, title: "", subtitle: "" },
+  { id: 12, title: "", subtitle: "" },
+  { id: 13, title: "", subtitle: "" },
+  { id: 14, title: "", subtitle: "" },
+  { id: 15, title: "", subtitle: "" },
+  { id: 16, title: "", subtitle: "" },
+  { id: 17, title: "", subtitle: "" },
+  { id: 18, title: "", subtitle: "" },
+  { id: 19, title: "", subtitle: "" },
+  { id: 20, title: "", subtitle: "" },
+  { id: 21, title: "", subtitle: "" },
+  { id: 22, title: "", subtitle: "" },
+  { id: 23, title: "", subtitle: "" },
+  { id: 24, title: "", subtitle: "" },
+  { id: 25, title: "", subtitle: "" },
+  { id: 26, title: "", subtitle: "" },
+  { id: 27, title: "", subtitle: "" },
+  { id: 28, title: "", subtitle: "" },
+  { id: 29, title: "", subtitle: "" },
+  { id: 30, title: "", subtitle: "" },
+  { id: 31, title: "", subtitle: "" },
+  { id: 32, title: "", subtitle: "" },
+  { id: 33, title: "", subtitle: "" },
+  { id: 34, title: "", subtitle: "" },
+  { id: 35, title: "", subtitle: "" },
+  { id: 36, title: "", subtitle: "" },
+  { id: 37, title: "", subtitle: "" },
+  { id: 38, title: "", subtitle: "" },
+  { id: 39, title: "", subtitle: "" },
+  { id: 40, title: "", subtitle: "" },
+  { id: 41, title: "", subtitle: "" },
+  { id: 42, title: "", subtitle: "" },
+  { id: 43, title: "", subtitle: "" },
+  { id: 44, title: "", subtitle: "" },
+  { id: 45, title: "", subtitle: "" },
+  { id: 46, title: "", subtitle: "" },
+  { id: 47, title: "", subtitle: "" },
+  { id: 48, title: "", subtitle: "" },
+  { id: 49, title: "", subtitle: "" },
+  { id: 50, title: "", subtitle: "" },
+  { id: 51, title: "", subtitle: "" },
+  { id: 52, title: "", subtitle: "" },
+  { id: 53, title: "", subtitle: "" },
+  { id: 54, title: "", subtitle: "" },
+  { id: 55, title: "", subtitle: "" },
+  { id: 56, title: "", subtitle: "" },
+  { id: 57, title: "", subtitle: "" },
+  { id: 58, title: "", subtitle: "" },
+  { id: 59, title: "", subtitle: "" },
+  { id: 60, title: "", subtitle: "" },
+];
+
 const Gallary = () => {
   const [cols, setCols] = useState(1);
   const [pageX, updatePageX] = useState<number>(0);
+  const [dataUrls, updateDataUrls] = useState([]);
+
   useEffect(() => {
     updatePageX(window.innerWidth);
     const handleResize = () => {
@@ -60,13 +126,12 @@ const Gallary = () => {
         gap={8}
         className="bg-lightGreen"
       >
-        {itemData.map((item) => (
-          <ImageListItem key={item.img} className="bg-brown">
+        {gallaryData.map((item) => (
+          <ImageListItem key={item.id} className="bg-brown">
             <Image
-              src={`${item.img}?w=248&fit=crop&auto=format`}
+              src={`https://storage.googleapis.com/tariq_bucket/pics/${item.id}.jpg`}
               alt={item.title}
               loading="lazy"
-              unoptimized
               width={100}
               height={100}
               style={{ width: "100%", height: "100%" }}
@@ -74,7 +139,7 @@ const Gallary = () => {
             <ImageListItemBar
               className="pl-2"
               title={`${item.id} . ${item.title}`}
-              subtitle={<span>by: {item.author}</span>}
+              subtitle={<span>{item.subtitle}</span>}
               position="below"
             />
           </ImageListItem>
@@ -84,78 +149,3 @@ const Gallary = () => {
   );
 };
 export default Gallary;
-
-const itemData = [
-  {
-    id: "0",
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-    author: "@bkristastucchio",
-  },
-  {
-    id: "1",
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
-    author: "@rollelflex_graphy726",
-  },
-  {
-    id: "2",
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    id: "3",
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
-    author: "@nolanissac",
-  },
-  {
-    id: "4",
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
-    author: "@hjrc33",
-  },
-  {
-    id: "5",
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-    author: "@arwinneil",
-  },
-  {
-    id: "6",
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
-    author: "@tjdragotta",
-  },
-  {
-    id: "7",
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-    author: "@katie_wasserman",
-  },
-  {
-    id: "8",
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    title: "Mushrooms",
-    author: "@silverdalex",
-  },
-  {
-    id: "9",
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-    title: "Tomato basil",
-    author: "@shelleypauls",
-  },
-  {
-    id: "10",
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-    author: "@peterlaster",
-  },
-  {
-    id: "11",
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-    author: "@southside_customs",
-  },
-];
