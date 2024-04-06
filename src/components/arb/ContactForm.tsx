@@ -22,13 +22,27 @@ const ContactForm = () => {
         <div className="mb-2 block">
           <Label htmlFor={nameId} value="اسمك بالكامل :" />
         </div>
-        <TextInput id={nameId} type="text" required />
+        <TextInput
+          id={nameId}
+          type="text"
+          required
+          onChange={(value: any) => {
+            updateFormData({ ...formData, fullName: value });
+          }}
+        />
       </div>
       <div>
         <div className="mb-2 block">
           <Label htmlFor={emailId} value="ایمیل :" />
         </div>
-        <TextInput id={emailId} type="email" required />
+        <TextInput
+          id={emailId}
+          type="email"
+          required
+          onChange={(value: any) => {
+            updateFormData({ ...formData, email: value });
+          }}
+        />
       </div>
       <div>
         <div className="mb-2 block">
@@ -56,7 +70,13 @@ const ContactForm = () => {
         <div className="mb-2 block">
           <Label htmlFor={requestId} value="طلب :" />
         </div>
-        <Textarea id={requestId} maxLength={250} />
+        <Textarea
+          id={requestId}
+          maxLength={250}
+          onChange={(value: any) => {
+            updateFormData({ ...formData, request: value });
+          }}
+        />
       </div>
       <Button type="submit">يُقدِّم</Button>
     </form>
