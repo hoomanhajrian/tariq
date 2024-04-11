@@ -30,7 +30,7 @@ const Resume = () => {
           </Box>
           <Image
             src={tariq}
-            width={100}
+            width={150}
             height={150}
             alt="tariq louis jazwari"
           />
