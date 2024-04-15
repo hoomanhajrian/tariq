@@ -40,18 +40,19 @@ const Gallary = () => {
       <Box className="relative">
         <Image
           src={background}
-          alt="tariq-louis-background"
+          alt="tariq-louis"
           width={500}
           height={500}
-          className="mr-auto ml-auto m-2 filter grayscale brightness-50 md:w-90 sm:w-100 md:h-65vh sm:h-50 rounded-lg"
+          className="mr-auto ml-auto m-2 filter brightness-50 w-100 md:h-70vh sm:h-50 rounded-lg"
+          style={{ objectFit: "cover", objectPosition: "top" }}
         />
         <Box className="absolute md:left-24 top-2 sm:left-5 p-5 md:w-25">
           <Typography component={"h3"} variant="h3">
             Gallary
           </Typography>
           <Typography component={"p"} variant="h6">
-            Here you can find some of my artwork to take a look and order online
-            by contacting me.
+            Feel free to explore a selection of my artwork in the photo gallery
+            and place orders online by contacting me directly.
           </Typography>
         </Box>
       </Box>
@@ -60,7 +61,6 @@ const Gallary = () => {
         cols={cols}
         variant="masonry"
         gap={8}
-        className="bg-lightGreen"
       >
         {gallaryData.map((item) => (
           <ImageListItem key={item.id} className="bg-brown rounded-md p-2">
