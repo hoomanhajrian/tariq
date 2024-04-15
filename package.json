@@ -16,6 +16,7 @@
     "@mui/styles": "^5.15.12",
     "@react-email/components": "^0.0.15",
     "@types/negotiator": "^0.6.3",
+    "axios": "^1.6.8",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.2",
     "limiter": "^2.1.0",
