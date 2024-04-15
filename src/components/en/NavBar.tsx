@@ -21,13 +21,11 @@ const NavBar = () => {
     gallary: undefined | boolean;
     resume: undefined | boolean;
     services: undefined | boolean;
-    about: undefined | boolean;
   }>({
     home: undefined,
     gallary: undefined,
     resume: undefined,
     services: undefined,
-    about: undefined,
   });
 
   useEffect(() => {
@@ -38,7 +36,6 @@ const NavBar = () => {
           gallary: false,
           resume: false,
           services: false,
-          about: false,
         });
         break;
       case "/en/gallary":
@@ -47,7 +44,6 @@ const NavBar = () => {
           gallary: true,
           resume: false,
           services: false,
-          about: false,
         });
         break;
 
@@ -57,7 +53,6 @@ const NavBar = () => {
           gallary: false,
           resume: true,
           services: false,
-          about: false,
         });
         break;
 
@@ -67,7 +62,6 @@ const NavBar = () => {
           gallary: false,
           resume: false,
           services: true,
-          about: false,
         });
         break;
 
@@ -77,7 +71,6 @@ const NavBar = () => {
           gallary: false,
           resume: false,
           services: false,
-          about: true,
         });
         break;
 
@@ -87,13 +80,12 @@ const NavBar = () => {
           gallary: false,
           resume: false,
           services: false,
-          about: false,
         });
         break;
     }
   }, []);
   return (
-    <Navbar fluid rounded className="bg-green">
+    <Navbar rounded className="bg-green">
       <NavbarBrand
         href="/en"
         onClick={() => {
@@ -102,7 +94,6 @@ const NavBar = () => {
             gallary: false,
             resume: false,
             services: false,
-            about: false,
           });
         }}
       >
@@ -179,7 +170,6 @@ const NavBar = () => {
               gallary: false,
               resume: false,
               services: false,
-              about: false,
             });
           }}
         >
@@ -196,7 +186,6 @@ const NavBar = () => {
               gallary: true,
               resume: false,
               services: false,
-              about: false,
             });
           }}
         >
@@ -213,7 +202,6 @@ const NavBar = () => {
               gallary: false,
               resume: true,
               services: false,
-              about: false,
             });
           }}
         >
@@ -230,28 +218,10 @@ const NavBar = () => {
               gallary: false,
               resume: false,
               services: true,
-              about: false,
             });
           }}
         >
           Services
-        </NavbarLink>
-        <NavbarLink
-          className="font-extrabold"
-          href="/en/about"
-          as={Link}
-          active={active.about}
-          onClick={() => {
-            setActive({
-              home: false,
-              gallary: false,
-              resume: false,
-              services: false,
-              about: true,
-            });
-          }}
-        >
-          About
         </NavbarLink>
       </NavbarCollapse>
     </Navbar>

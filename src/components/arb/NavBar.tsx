@@ -21,63 +21,56 @@ const NavBar = () => {
     gallary: undefined | boolean;
     resume: undefined | boolean;
     services: undefined | boolean;
-    about: undefined | boolean;
   }>({
     home: undefined,
     gallary: undefined,
     resume: undefined,
     services: undefined,
-    about: undefined,
   });
 
   useEffect(() => {
     switch (document.location.pathname) {
-      case "/arb":
+      case "/en":
         setActive({
           home: true,
           gallary: false,
           resume: false,
           services: false,
-          about: false,
         });
         break;
-      case "/arb/gallary":
+      case "/en/gallary":
         setActive({
           home: false,
           gallary: true,
           resume: false,
           services: false,
-          about: false,
         });
         break;
 
-      case "/arb/resume":
+      case "/en/resume":
         setActive({
           home: false,
           gallary: false,
           resume: true,
           services: false,
-          about: false,
         });
         break;
 
-      case "/arb/services":
+      case "/en/services":
         setActive({
           home: false,
           gallary: false,
           resume: false,
           services: true,
-          about: false,
         });
         break;
 
-      case "/arb/about":
+      case "/en/about":
         setActive({
           home: false,
           gallary: false,
           resume: false,
           services: false,
-          about: true,
         });
         break;
 
@@ -87,13 +80,12 @@ const NavBar = () => {
           gallary: false,
           resume: false,
           services: false,
-          about: false,
         });
         break;
     }
   }, []);
   return (
-    <Navbar fluid rounded dir="rtl" className="bg-green">
+    <Navbar rounded dir="rtl" className="bg-green">
       <NavbarBrand
         href="/arb"
         onClick={() => {
@@ -102,7 +94,6 @@ const NavBar = () => {
             gallary: false,
             resume: false,
             services: false,
-            about: false,
           });
         }}
       >
@@ -172,7 +163,6 @@ const NavBar = () => {
               gallary: false,
               resume: false,
               services: false,
-              about: false,
             });
           }}
         >
@@ -189,7 +179,6 @@ const NavBar = () => {
               gallary: true,
               resume: false,
               services: false,
-              about: false,
             });
           }}
         >
@@ -206,7 +195,6 @@ const NavBar = () => {
               gallary: false,
               resume: true,
               services: false,
-              about: false,
             });
           }}
         >
@@ -223,28 +211,10 @@ const NavBar = () => {
               gallary: false,
               resume: false,
               services: true,
-              about: false,
             });
           }}
         >
           خدمات
-        </NavbarLink>
-        <NavbarLink
-          className="font-extrabold"
-          href="/arb/about"
-          as={Link}
-          active={active.about}
-          onClick={() => {
-            setActive({
-              home: false,
-              gallary: false,
-              resume: false,
-              services: false,
-              about: true,
-            });
-          }}
-        >
-          عن
         </NavbarLink>
       </NavbarCollapse>
     </Navbar>
