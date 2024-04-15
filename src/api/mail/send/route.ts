@@ -18,8 +18,8 @@ export async function POST(req: Request) {
   } else {
     try {
       const data = await resend.emails.send({
-        from: "CustomerSupport <website@littlesellca.com>",
-        to: ["admin@littlesellca.com"],
+        from: "Customer Request <website@littlesellca.com>",
+        to: ["tariqlouiss@yahoo.com"],
         subject: `${res.user.subject}(${res.user.name})`,
         react: EmailTemplate({
           name: "name",
