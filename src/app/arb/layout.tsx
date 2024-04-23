@@ -1,6 +1,8 @@
 import NavBar from "@/components/arb/NavBar";
 import { FooterComponent } from "@/components/arb/FooterComponent";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "طارق لویس",
@@ -12,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div style={{ direction: "rtl" }}>
+    <div className={inter.className} style={{ direction: "rtl" }}>
       <NavBar />
       <div className="p-3">{children}</div>
       <FooterComponent />
