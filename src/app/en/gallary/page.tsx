@@ -68,6 +68,7 @@ const Gallary = () => {
               src={`https://storage.googleapis.com/tariq_bucket/pics/${item.id}.jpg`}
               alt={item.title}
               loading="lazy"
+              unoptimized
               width={100}
               height={100}
               style={{ width: "100%", height: "auto" }}
