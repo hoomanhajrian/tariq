@@ -64,7 +64,7 @@ const Gallary = () => {
         {gallaryData.map((item) => (
           <ImageListItem key={item.id} className="bg-brown rounded-md p-2">
             <Image
-              src={`https://storage.googleapis.com/tariq_bucket/pics/${item.id}.jpg`}
+              src={`https://storage.googleapis.com/tariq-pics/${item.id}.jpg`}
               alt={item.title}
               loading="lazy"
               width={100}
