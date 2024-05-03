@@ -12,7 +12,7 @@ export default function Home() {
         className="mr-auto ml-auto w-100 md:w-90 filter brightness-50"
         priority
       />
-      <p className="absolute bottom-0 rounded-2xl p-8 bg-brown opacity-70 text-justify h-60 text-md md:h-auto md:text-lg">
+      <p className="absolute bottom-0 rounded-2xl p-5 bg-brown opacity-70 text-justify h-60 text-sm md:text-lg md:h-auto">
         Tariq Louis is a master sculptor whose creations transcend the ordinary,
         inviting viewers into a world where imagination meets craftsmanship.
         With a keen eye for detail and a deep understanding of form, Louis
