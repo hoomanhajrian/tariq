@@ -42,7 +42,7 @@ const Gallary = () => {
           width={500}
           height={500}
           className="mr-auto ml-auto m-2 filter brightness-50 w-100 md:h-70vh sm:h-50 rounded-lg"
-          style={{ objectFit: "cover", objectPosition: "top" }}
+          style={{objectFit:'cover' ,objectPosition: pageX<1200 ? 'top' :"0px -150px" }}
         />
         <Box className="absolute md:left-70 top-7 sm:left-5 p-5 md:w-25">
           <Typography component={"h3"} variant="h3">
