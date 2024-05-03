@@ -7,7 +7,6 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import tariq from "@/pics/tariq.jpg";
 
 const Resume = () => {
   return (
@@ -31,7 +30,7 @@ const Resume = () => {
             </Typography>
           </Box>
           <Image
-            src={tariq}
+            src={'/pics/tariq.jpg'}
             width={150}
             height={150}
             alt="tariq louis jazwari"
