@@ -3,7 +3,7 @@ import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
 let locales = ["en", "arb"];
-let headers = { "accept-language": "en-US,en;q=0.5" };
+let headers = { "accept-language": "en-US,en,arb;q=0.5" };
 let languages = new Negotiator({ headers }).languages();
 let defaultLocale = "en";
 
@@ -25,10 +25,12 @@ export function middleware(request: NextRequest) {
   return NextResponse.redirect(request.nextUrl);
 }
 export const config = {
+  
   matcher: [
     // Skip all internal paths (_next)
-    "/((?!_next).*)",
+    // "/((?!_next).*)",
+    
     // Optional: only run on root (/) URL
-    // '/'
+    '/'
   ],
 };

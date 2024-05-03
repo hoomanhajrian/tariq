@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import background from "@/pics/tariq-background.jpg";
 import gallaryData from "@/app/appData.json";
 
 const Gallary = () => {
@@ -39,7 +38,7 @@ const Gallary = () => {
     <>
       <Box className="relative">
         <Image
-          src={background}
+          src={"/pics/tariq-background.jpg"}
           alt="tariq-louis"
           width={500}
           height={500}

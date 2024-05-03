@@ -7,7 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import background from "@/pics/tariq-background.jpg";
 import gallaryData from "@/app/appData.json";
 import { useState, useEffect } from "react";
 const Gallary = () => {
@@ -37,7 +36,7 @@ const Gallary = () => {
     <>
       <Box className="relative">
         <Image
-          src={background}
+          src={"/pics/tariq-background.jpg"}
           alt="tariq-louis"
           width={500}
           height={500}

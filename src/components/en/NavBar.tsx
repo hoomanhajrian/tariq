@@ -10,9 +10,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Logo from "@/app/icon.png";
-import UK from "@/icons/uk-icon.png";
-import UAE from "@/icons/uae-icon.png";
 import { Typography } from "@mui/material";
 
 const NavBar = () => {
@@ -98,7 +95,7 @@ const NavBar = () => {
         }}
       >
         <Image
-          src={Logo}
+          src={"/icon.png"}
           className="mr-0"
           alt="Tariq Logo"
           width={100}
@@ -134,7 +131,7 @@ const NavBar = () => {
             className="flex flex-row w-100 justify-between"
           >
             <Image
-              src={UK}
+              src={"/icons/uk-icon.png"}
               alt="uk language"
               width={20}
               height={20}
@@ -147,7 +144,7 @@ const NavBar = () => {
             className="flex flex-row w-100 justify-between"
           >
             <Image
-              src={UAE}
+              src={"/icons/uae-icon.png"}
               alt="arabic language"
               width={20}
               height={20}

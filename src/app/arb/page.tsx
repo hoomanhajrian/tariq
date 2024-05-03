@@ -1,12 +1,13 @@
 import Image from "next/image";
-import backgroundImage from "@/pics/background.jpg";
 
 export default function Home() {
   return (
     <div className="relative">
       <Image
-        src={backgroundImage}
+        src={"/pics/background.jpg"}
         alt="Louis Tariq"
+        width={500}
+          height={500}
         style={{ height: "600px" }}
         className="mr-auto ml-auto w-100 md:w-90 filter brightness-50"
         priority

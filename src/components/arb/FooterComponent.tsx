@@ -5,13 +5,12 @@ import {
   FooterLinkGroup,
 } from "flowbite-react";
 import Image from "next/image";
-import Logo from "@/app/icon.png";
 export const FooterComponent = () => {
   const date = new Date();
   return (
     <Footer container className=" bg-green p-10" dir="rtl">
       <div className="flex flex-row">
-        <Image src={Logo} alt="tariq-logo" width={100} height={100} />
+        <Image src={"/icon.png"} alt="tariq-logo" width={100} height={100} />
         <h2 className="whitespace-nowrap text-3xl font-semibold text-white mt-8">
           Tariq Louis
         </h2>

@@ -7,9 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Tariq Louis",
   description: "Member Of Iraqi Plastic Artists, ",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
