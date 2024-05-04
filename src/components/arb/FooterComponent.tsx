@@ -12,7 +12,7 @@ export const FooterComponent = () => {
       <div className="flex flex-row">
         <Image src={"/icon.png"} alt="tariq-logo" width={100} height={100} />
         <h2 className="whitespace-nowrap text-3xl font-semibold text-white mt-8">
-          Tariq Louis
+        طارق لويس
         </h2>
       </div>
       <FooterLinkGroup className="gap-5">
