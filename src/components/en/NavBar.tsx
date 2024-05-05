@@ -9,7 +9,7 @@ import {
 } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useId } from "react";
 import { Typography } from "@mui/material";
 
 const NavBar = () => {
@@ -24,6 +24,8 @@ const NavBar = () => {
     resume: undefined,
     services: undefined,
   });
+
+  const menuId = useId();
 
   useEffect(() => {
     switch (document.location.pathname) {
@@ -81,11 +83,22 @@ const NavBar = () => {
         break;
     }
   }, []);
+
+  useEffect(() => {
+    const closeMenu = () => {
+      document.getElementById(menuId)?.classList.add('hidden');
+    };
+    window.addEventListener('scroll', closeMenu);
+
+    return () => window.removeEventListener('scroll', closeMenu);
+  }, [])
+
   return (
     <Navbar rounded className="bg-green">
       <NavbarBrand
         href="/en"
         onClick={() => {
+          document.getElementById(menuId)?.classList.add('hidden');
           setActive({
             home: true,
             gallary: false,
@@ -153,15 +166,17 @@ const NavBar = () => {
             عربي
           </Dropdown.Item>
         </Dropdown>
-        <NavbarToggle className="mr-5 ml-auto" />
+        <NavbarToggle onClick={()=>{document.getElementById(menuId)?.classList.toggle('hidden');}} className="mr-5 ml-auto" />
       </div>
-      <NavbarCollapse className="w-100">
+      <NavbarCollapse id={menuId} className="w-100">
         <NavbarLink
           className="font-extrabold"
           href="/en"
           as={Link}
           active={active.home}
           onClick={() => {
+
+            document.getElementById(menuId)?.classList.add('hidden');
             setActive({
               home: true,
               gallary: false,
@@ -178,6 +193,8 @@ const NavBar = () => {
           as={Link}
           active={active.gallary}
           onClick={() => {
+
+            document.getElementById(menuId)?.classList.add('hidden');
             setActive({
               home: false,
               gallary: true,
@@ -194,6 +211,8 @@ const NavBar = () => {
           as={Link}
           active={active.resume}
           onClick={() => {
+
+            document.getElementById(menuId)?.classList.add('hidden');
             setActive({
               home: false,
               gallary: false,
@@ -210,6 +229,7 @@ const NavBar = () => {
           as={Link}
           active={active.services}
           onClick={() => {
+            document.getElementById(menuId)?.classList.add('hidden');
             setActive({
               home: false,
               gallary: false,
