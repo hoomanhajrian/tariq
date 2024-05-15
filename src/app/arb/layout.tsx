@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "عضو جمعية الفنانين التشكيليين والرسامين العراقيين",
   applicationName: "طارق لویس",
   alternates:{
-    canonical:'/arb'
+    canonical:'https://www.tariq-mesopotamiaart.com/arb'
   }
 };
 export default function RootLayout({

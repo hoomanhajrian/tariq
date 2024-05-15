@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Member Of Iraqi Plastic Artists and Painters",
   applicationName: "Tariq Louis",
   alternates:{
-    canonical:'/en'
+    canonical:'https://www.tariq-mesopotamiaart.com/en'
   }
 };
 
