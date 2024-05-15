@@ -1,4 +1,15 @@
 import "./globals.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  authors: [{ name: "Hooman" }],
+  generator: 'Next.js',
+  keywords: ['tariq louis'],
+  referrer: 'origin-when-cross-origin',
+  creator: 'Hooman',
+  publisher: 'Hooman',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
