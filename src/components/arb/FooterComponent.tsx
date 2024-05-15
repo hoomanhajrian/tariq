@@ -28,7 +28,7 @@ export const FooterComponent = () => {
         <FooterLink href="mailto:tariqlouiss@yahoo.com" className="font-extrabold text-textLight">
           بريد إلكتروني : tariqlouiss@yahoo.com
         </FooterLink>
-        <FooterLink href="https://www.facebook.com/tariqlouiss" target="_blank"  className="font-extrabold text-textLight">
+        <FooterLink href="https://www.facebook.com/tariqlouiss" target="_blank" className="font-extrabold text-textLight">
           فيسبوك : tariq louis
         </FooterLink>
       </FooterLinkGroup>
