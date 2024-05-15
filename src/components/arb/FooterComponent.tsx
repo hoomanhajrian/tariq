@@ -22,13 +22,13 @@ export const FooterComponent = () => {
           by="هومن"
           year={date.getFullYear()}
         />
-        <FooterLink href="#" className="font-extrabold text-textLight">
+        <FooterLink href="tel:+17787511620" className="font-extrabold text-textLight">
           هاتف : +1 (778)-751-1620
         </FooterLink>
-        <FooterLink href="#" className="font-extrabold text-textLight">
+        <FooterLink href="mailto:tariqlouiss@yahoo.com" className="font-extrabold text-textLight">
           بريد إلكتروني : tariqlouiss@yahoo.com
         </FooterLink>
-        <FooterLink href="#" className="font-extrabold text-textLight">
+        <FooterLink href="https://www.facebook.com/tariqlouiss" target="_blank"  className="font-extrabold text-textLight">
           فيسبوك : tariq louis
         </FooterLink>
       </FooterLinkGroup>
