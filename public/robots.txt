@@ -1,0 +1,6 @@
+User-agent: Googlebot
+
+User-agent: *
+Allow: /
+
+Sitemap: https://https://www.tariq-mesopotamiaart.com/sitemap.xml

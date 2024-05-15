@@ -1,5 +1,5 @@
 "use client";
-import { useState, useId, useRef } from "react";
+import { useState, useId, useRef, useEffect } from "react";
 import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import { MuiTelInput } from "mui-tel-input";
 import axios from "axios";
@@ -83,6 +83,7 @@ const ContactForm = () => {
       }, 2000);
     }
   };
+
   return (
     <form
       onSubmit={submitRequet}
@@ -92,13 +93,17 @@ const ContactForm = () => {
         <div className="mb-2 block">
           <Label htmlFor={nameId} value="Full Name :" />
         </div>
-        <TextInput id={nameId} type="text" required />
+        <TextInput id={nameId} type="text" required onChange={(e: any) => {
+              updateFormData({ ...formData, fullName: e.target.value });
+          }}/>
       </div>
       <div>
         <div className="mb-2 block">
           <Label htmlFor={emailId} value="Email :" />
         </div>
-        <TextInput id={emailId} type="email" required />
+        <TextInput id={emailId} type="email" required onChange={(e: any) => {
+              updateFormData({ ...formData, email: e.target.value });
+          }}/>
       </div>
       <div>
         <div className="mb-2 block">
@@ -129,7 +134,9 @@ const ContactForm = () => {
         <div className="mb-2 block">
           <Label htmlFor={requestId} value="Request :" />
         </div>
-        <Textarea id={requestId} maxLength={250} required />
+        <Textarea id={requestId} maxLength={250} required onChange={(e: any) => {
+              updateFormData({ ...formData, request: e.target.value });
+          }}/>
       </div>
       <Button type="submit">Submit</Button>
       <Typography variant="body1" component={"p"} color={errorMessage.color}>
