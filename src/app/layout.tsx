@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   creator: 'Hooman',
   publisher: 'Hooman',
+  alternates:{
+    canonical:'https://www.tariqmesopotemia-art.com'
+  }
 };
 
 export default function RootLayout({
