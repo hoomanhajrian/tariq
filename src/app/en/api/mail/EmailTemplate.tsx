@@ -28,7 +28,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     </Head>
     <Body>
       <Img
-        src="https://www.pacivil.com/pacivil-letter-head.jpg"
+        src="/icon.png"
         width="50px"
         height="50px"
       />
