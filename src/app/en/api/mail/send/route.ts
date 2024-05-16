@@ -10,6 +10,9 @@ export async function POST(req: Request) {
   const remaining = await emailLimiter.removeTokens(1);
   const origin = req.headers.get("origin");
 
+  console.log(res);
+  
+
   if (remaining < 0) {
     return NextResponse.json("You have already sent a message.", {
       status: 429,
