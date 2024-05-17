@@ -7,7 +7,7 @@ import {
 // import Logo from "@/app/icon.png";
 import Image from "next/image";
 
-export const FooterComponent = () => {
+const FooterComponent = () => {
   const date = new Date();
   return (
     <Footer container className="bg-green p-10">
@@ -37,3 +37,5 @@ export const FooterComponent = () => {
     </Footer>
   );
 };
+
+export default FooterComponent;

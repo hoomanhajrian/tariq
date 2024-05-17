@@ -5,7 +5,7 @@ import {
   FooterLinkGroup,
 } from "flowbite-react";
 import Image from "next/image";
-export const FooterComponent = () => {
+const FooterComponent = () => {
   const date = new Date();
   return (
     <Footer container className=" bg-green p-10" dir="rtl">
@@ -35,3 +35,5 @@ export const FooterComponent = () => {
     </Footer>
   );
 };
+
+export default FooterComponent;

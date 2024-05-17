@@ -1,6 +1,7 @@
+import { lazy } from "react";
 import type { Metadata } from "next";
-import NavBar from "@/components/en/NavBar";
-import { FooterComponent } from "@/components/en/FooterComponent";
+const NavBar = lazy(()=>import('@/components/en/NavBar'));
+const FooterComponent = lazy(() => import("@/components/en/FooterComponent"));
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
