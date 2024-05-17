@@ -16,7 +16,7 @@ const Resume = () => {
       <div className="md:col-span-2">
         <div className="flex flex-wrap justify-around bg-orange rounded-xl p-2 m-1 ml-0 mb-0">
           <div>
-            <h1>
+            <h1 style={{textAlign:'left'}}>
               Tariq Louis Jazrawi
             </h1>
             <h2 style={{textAlign:'left'}}>
