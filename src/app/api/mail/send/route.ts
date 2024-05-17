@@ -1,14 +1,12 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
-import { emailLimiter } from "../limiter";
-import { EmailTemplate } from "../EmailTemplate";
+// import { emailLimiter } from "../limiter";
+// import { EmailTemplate } from "../EmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const res = await req.json();
-  console.log(res);
-
   // const remaining = await emailLimiter.removeTokens(1);
   // const origin = req.headers.get("origin");
   
@@ -45,8 +43,4 @@ export async function POST(req: Request) {
   //     return NextResponse.json(error, { status: 500 });
   //   }
   // }
-}
-
-export async function GET(req: Request) {
-  return NextResponse.json('res',{ status: 200 });
-}
+};

@@ -1,5 +1,5 @@
-import ContactForm from "@/components/arb/ContactForm";
-import { Typography } from "@mui/material";
+import { lazy } from "react";
+const ContactForm = lazy(()=>import("@/components/arb/ContactForm"));
 
 const Services = () => {
   return (
