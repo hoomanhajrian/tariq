@@ -5,6 +5,7 @@ import {
   FooterLinkGroup,
 } from "flowbite-react";
 import Image from "next/image";
+
 const FooterComponent = () => {
   const date = new Date();
   return (

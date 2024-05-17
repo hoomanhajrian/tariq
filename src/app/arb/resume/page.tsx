@@ -1,6 +1,4 @@
 import {
-  Container,
-  Typography,
   Box,
   List,
   ListItem,
@@ -10,46 +8,46 @@ import Image from "next/image";
 
 const Resume = () => {
   return (
-    <Container
-      maxWidth="md"
-      className="grid sm:grid-cols-1 md:grid-cols-2 text-right"
+    <div
+      className="grid sm:grid-cols-1 md:grid-cols-2 text-right p-5"
     >
-      <Box my={4} className="md:col-span-2">
-        <Box className="flex flex-wrap justify-around bg-orange rounded-xl p-2 m-1 ml-0 mb-0">
-          <Box>
-            <Typography variant="h3" component="h1" gutterBottom>
+      <div className="md:col-span-2">
+        <div className="flex flex-wrap justify-around bg-orange rounded-xl p-2 m-1 ml-0 mb-0">
+          <div>
+            <h1>
               طارق لويس جزراوی
-            </Typography>
-            <Typography variant="h5" component="h2" gutterBottom>
+            </h1>
+            <h2>
               النحات والرسام
-            </Typography>
-            <Typography variant="h5" component="h3" gutterBottom>
+            </h2>
+            <h3>
               عضو جمعية الفنانين التشكيليين العراقيين
-            </Typography>
-          </Box>
+            </h3>
+          </div>
           <Image
             src={'/pics/tariq.jpg'}
             width={150}
             height={150}
-            alt="tariq louis jazwari"
+            alt="طارق لويس جزراوی"
+            className="p-2"
           />
-        </Box>
-      </Box>
-      <Box my={4} className="md:col-span-2">
-        <Box>
-          <Typography variant="h6" component="p" gutterBottom>
+        </div>
+      </div>
+      <div className="md:col-span-2">
+        <div>
+          <p className="p-3 text-justify">
             أحب العمل بيدي، النجارة والبناء، أحب الناس وفني هو رمز حبي للناس.
             ينصب تركيزي على الإنسان وأعطي كل قطعة فنية قطعة من روحي. الفن يعيش
             في قلبي وروحي وأريد أن أظهر للعالم الآثار العراقية. لدي مجموعة كبيرة
             من الآثار العراقية المقلدة وأريد أن يصبح الفن العراقي معروفاً في
             مجتمعنا.
-          </Typography>
-        </Box>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+          </p>
+        </div>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl">
           تعليم
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -73,11 +71,11 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div>
+        <h3 className="text-2xl">
           خبرة
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -115,11 +113,11 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl">
           المعارض
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -157,11 +155,11 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl">
           مهارات
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText sx={{ textAlign: "right" }} primary="نجارة" />
@@ -185,11 +183,11 @@ const Resume = () => {
             <ListItemText sx={{ textAlign: "right" }} primary="إعداد المعرض" />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl">
           ابقى على تواصل
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -210,8 +208,8 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 

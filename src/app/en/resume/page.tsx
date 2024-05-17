@@ -10,49 +10,47 @@ import Image from "next/image";
 
 const Resume = () => {
   return (
-    <Container maxWidth="md" className="grid sm:grid-cols-1 md:grid-cols-2">
-      <Box my={4} className="md:col-span-2">
-        <Box className="flex flex-wrap justify-around bg-orange rounded-xl p-2 m-1 ml-0 mb-0">
-          <Box>
-            <Typography
-              className="sm:text-md"
-              variant="h3"
-              component="h1"
-              gutterBottom
-            >
+    <div
+      className="grid sm:grid-cols-1 md:grid-cols-2 text-right p-5"
+    >
+      <div className="md:col-span-2">
+        <div className="flex flex-wrap justify-around bg-orange rounded-xl p-2 m-1 ml-0 mb-0">
+          <div>
+            <h1>
               Tariq Louis Jazrawi
-            </Typography>
-            <Typography variant="h5" component="h2" gutterBottom>
+            </h1>
+            <h2 style={{textAlign:'left'}}>
               Sculptor and Painter
-            </Typography>
-            <Typography variant="h5" component="h3" gutterBottom>
+            </h2>
+            <h3 style={{textAlign:'left'}}>
               Member Of Iraqi Plastic Artists
-            </Typography>
-          </Box>
+            </h3>
+          </div>
           <Image
             src={'/pics/tariq.jpg'}
             width={150}
             height={150}
             alt="tariq louis jazwari"
+            className="p-2"
           />
-        </Box>
-      </Box>
-      <Box my={4} className="md:col-span-2">
-        <Box>
-          <Typography variant="h6" component="p" gutterBottom>
+        </div>
+      </div>
+      <div className="md:col-span-2">
+        <div>
+          <p className="p-3 text-justify">
             I love working with my hands, carpentry and construction, I love
             people and my art is my token of love to people. My focus is on the
             human and I give every piece of art a piece of my soul. Art lives in
             my heart and soul and I want to show the world Iraqi antiquities. I
             have a large collection of imitations of Iraqi Antiquities and want
             Iraqi art to become known in our community.
-          </Typography>
-        </Box>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+          </p>
+        </div>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl" style={{textAlign:'left'}}>
           Education
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -73,11 +71,11 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl" style={{textAlign:'left'}}>
           Experience
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -110,11 +108,11 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl" style={{textAlign:'left'}}>
           Exhibitions
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText
@@ -147,11 +145,11 @@ const Resume = () => {
             />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl" style={{textAlign:'left'}}>
           Skills
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText primary="Carpentry" />
@@ -172,11 +170,11 @@ const Resume = () => {
             <ListItemText primary="Exhibition Setup" />
           </ListItem>
         </List>
-      </Box>
-      <Box mt={4}>
-        <Typography variant="h4" gutterBottom>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-2xl" style={{textAlign:'left'}}>
           Get in Touch
-        </Typography>
+        </h3>
         <List>
           <ListItem>
             <ListItemText primary="Email : tariqlouiss@yahoo.com" />
@@ -188,8 +186,8 @@ const Resume = () => {
             <ListItemText primary="Facebook : Tariq Louis" />
           </ListItem>
         </List>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 

@@ -117,19 +117,16 @@ const NavBar = () => {
         />
 
         <div className="flex flex-col">
-          <Typography
-            component={"h1"}
+          <h1
             className="self-start whitespace-nowrap sm:text-sm md:text-4xl font-semibold text-white mt-0"
           >
             Tariq Louis
-          </Typography>
-          <Typography
-            component={"h2"}
-            variant="body1"
+          </h1>
+          <h2
             className="self-start whitespace-nowrap sm:text-sm md:text-xl font-semibold text-white"
           >
             Sculptor and Painter
-          </Typography>
+          </h2>
         </div>
       </NavbarBrand>
       <div className="flex flex-row flex-wrap justify-between md:order-2 w-100">

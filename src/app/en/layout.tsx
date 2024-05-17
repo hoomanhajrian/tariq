@@ -2,8 +2,8 @@ import { lazy } from "react";
 import type { Metadata } from "next";
 const NavBar = lazy(()=>import('@/components/en/NavBar'));
 const FooterComponent = lazy(() => import("@/components/en/FooterComponent"));
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { Kanit } from "next/font/google";
+const kanit = Kanit({ subsets: ["latin"],weight:["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
   title: "Tariq Louis",
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className={inter.className}>
+    <div className={kanit.className}>
       <NavBar />
       <div className="p-3">{children}</div>
       <FooterComponent />

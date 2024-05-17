@@ -4,7 +4,6 @@ import {
   FooterLink,
   FooterLinkGroup,
 } from "flowbite-react";
-// import Logo from "@/app/icon.png";
 import Image from "next/image";
 
 const FooterComponent = () => {
