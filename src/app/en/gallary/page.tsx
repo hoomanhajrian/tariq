@@ -47,7 +47,7 @@ const Gallary = () => {
       />
         <Box className="absolute md:left-24 top-2 sm:left-5 p-5 md:w-25">
           <Typography component={"h3"} variant="h3">
-            Gallary
+            Gallery
           </Typography>
           <Typography component={"p"} variant="h6">
             Feel free to explore a selection of my artwork in the photo gallery
