@@ -200,7 +200,7 @@ const NavBar = () => {
             });
           }}
         >
-          Gallary
+          Gallery
         </NavbarLink>
         <NavbarLink
           className="font-extrabold"
