@@ -6,6 +6,8 @@ import {
   ImageListItemBar,
   Typography,
 } from "@mui/material";
+import DownloadIcon from '@mui/icons-material/Download';
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import gallaryData from "@/app/appData.json";
@@ -43,8 +45,8 @@ const Gallary = () => {
           width={500}
           height={500}
           className="mr-auto ml-auto m-2 filter brightness-50 w-100 md:h-70vh sm:h-50 rounded-lg"
-          style={{objectFit:'cover' ,objectPosition: pageX<1200 ? 'top' :"0px -150px" }}
-      />
+          style={{ objectFit: 'cover', objectPosition: pageX < 1200 ? 'top' : "0px -150px" }}
+        />
         <Box className="absolute md:left-24 top-2 sm:left-5 p-5 md:w-25">
           <Typography component={"h3"} variant="h3">
             Gallery
@@ -72,12 +74,15 @@ const Gallary = () => {
               height={100}
               style={{ width: "100%", height: "auto" }}
             />
-            <ImageListItemBar
-              className="p-2 h-auto"
-              title={`${item.id} . ${item.title}`}
-              subtitle={<span>{item.subtitle}</span>}
-              position="below"
-            />
+            <div className="flex justify-between align-middle items-center">
+              <ImageListItemBar
+                className="p-2 h-auto"
+                title={`${item.id} . ${item.title}`}
+                subtitle={<span>{item.subtitle}</span>}
+                position="below"
+              />
+              <Link href={`/app-pics/${item.id}.jpg`} target="_blank" download><DownloadIcon color="inherit"/></Link>
+            </div>
           </ImageListItem>
         ))}
       </ImageList>

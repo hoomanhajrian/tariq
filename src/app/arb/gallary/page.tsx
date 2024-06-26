@@ -5,7 +5,9 @@ import {
   ImageListItemBar,
   Box,
   Typography,
-} from "@mui/material";
+  } from "@mui/material";
+import DownloadIcon from '@mui/icons-material/Download';
+import Link from "next/link";
 import Image from "next/image";
 import gallaryData from "@/app/appData.json";
 import { useState, useEffect } from "react";
@@ -70,12 +72,15 @@ const Gallary = () => {
               height={100}
               style={{ width: "100%", height: "auto" }}
             />
-            <ImageListItemBar
-              className="p-2 h-auto"
-              title={`${item.id} . ${item.title}`}
-              subtitle={<span>{item.subtitle}</span>}
-              position="below"
-            />
+            <div className="flex justify-between align-middle items-center">
+              <ImageListItemBar
+                className="p-2 h-auto"
+                title={`${item.id} . ${item.title}`}
+                subtitle={<span>{item.subtitle}</span>}
+                position="below"
+              />
+              <Link href={`/app-pics/${item.id}.jpg`} target="_blank" download><DownloadIcon color="inherit"/></Link>
+            </div>
           </ImageListItem>
         ))}
       </ImageList>
