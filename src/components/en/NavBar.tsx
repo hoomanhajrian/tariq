@@ -10,7 +10,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useId } from "react";
-import { Typography } from "@mui/material";
 
 const NavBar = () => {
   const [active, setActive] = useState<{
