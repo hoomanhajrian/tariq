@@ -80,7 +80,7 @@ const Gallary = () => {
             <div className="flex justify-between align-middle items-center">
               <ImageListItemBar
                 className="p-2 text-wrap w-80 h-auto"
-                title={`${item.id} . ${item.title}`}
+                title={`${item.id} . ${item.title != '' ? item.title : 'No Name'}`}
                 subtitle={<span>{item.subtitle}</span>}
                 position="below"
               />
