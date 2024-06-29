@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import DownloadIcon from '@mui/icons-material/Download';
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import gallaryData from "@/app/appData.json";
