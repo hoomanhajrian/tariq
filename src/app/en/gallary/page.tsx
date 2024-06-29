@@ -5,7 +5,10 @@ import {
   ImageListItem,
   ImageListItemBar,
   Typography,
+  Tooltip,
+  Button
 } from "@mui/material";
+import ShareIcon from "@mui/icons-material/Share";
 import DownloadIcon from '@mui/icons-material/Download';
 import Link from "next/link";
 import Image from "next/image";
@@ -81,7 +84,27 @@ const Gallary = () => {
                 subtitle={<span>{item.subtitle}</span>}
                 position="below"
               />
-              <Link href={`/app-pics/${item.id}.jpg`} target="_blank" download><DownloadIcon color="inherit"/></Link>
+
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Tooltip disableFocusListener title="Share Item" placement="top">
+                  <Button
+                    sx={{ color: "white", fontSize: "0.4rem" }}
+                    onClick={() => {
+                      navigator.share({
+                        title: "Share Link",
+                        text: "Item Link",
+                        url: `/app-pics/${item.id}.jpg`,
+                      });
+                    }}
+                  >
+                    <ShareIcon />
+                  </Button>
+                </Tooltip>
+                <Tooltip disableFocusListener title="Download" placement="left">
+                  <Button sx={{ color: "white", fontSize: "0.4rem" }} href={`/app-pics/${item.id}.jpg`} target="_blank" download><DownloadIcon color="inherit" /></Button>
+                </Tooltip>
+                
+              </Box>
             </div>
           </ImageListItem>
         ))}
