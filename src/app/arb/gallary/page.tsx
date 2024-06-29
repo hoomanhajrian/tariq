@@ -96,7 +96,7 @@ const Gallary = () => {
                     <ShareIcon />
                   </Button>
                 </Tooltip>
-                <Tooltip disableFocusListener title="Download" placement="left">
+                <Tooltip disableFocusListener title="Download" placement="right">
                   <Button sx={{ color: "white", fontSize: "0.4rem" }} href={`/app-pics/${item.id}.jpg`} target="_blank" download><DownloadIcon color="inherit" /></Button>
                 </Tooltip>
 
